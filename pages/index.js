@@ -174,9 +174,9 @@ export default function Home() {
 
             <input className="block text-white p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700" placeholder="Enter Amount Of Tokens" type="number" onChange={(e)=> setTokenAmount(BigNumber.from(e.target.value))} />
 
-          <button className="block text-white p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 bg-rose-900 dark:border-gray-700 dark:hover:bg-gray-700" disabled={!(tokenAmount > 0)} onClick={()=>mintAzogDevTokens(tokenAmount)}> Mint Tokens </button>
-          <button className="block text-white p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 bg-rose-900 dark:border-gray-700 dark:hover:bg-gray-700" onClick={()=>router.push('https://minted-dao-ravi-ravinthiranpartheepan1407.vercel.app/')}> NFT Mint </button>
-          <button className="block text-white p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 bg-rose-900 dark:border-gray-700 dark:hover:bg-gray-700" onClick={()=>router.push('https://dao-v1-ravi.vercel.app/')}> DAO(V1) </button>
+          <button className="block text-white p-6 max-w-sm rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 bg-rose-900 dark:border-gray-700 dark:hover:bg-gray-700" disabled={!(tokenAmount > 0)} onClick={()=>mintAzogDevTokens(tokenAmount)}> Mint Tokens </button>
+          <button className="block text-white p-6 max-w-sm rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 bg-rose-900 dark:border-gray-700 dark:hover:bg-gray-700" onClick={()=>router.push('https://minted-dao-ravi-ravinthiranpartheepan1407.vercel.app/')}> NFT Mint </button>
+          <button className="block text-white p-6 max-w-sm rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 bg-rose-900 dark:border-gray-700 dark:hover:bg-gray-700" onClick={()=>router.push('https://dao-v1-ravi.vercel.app/')}> DAO(V1) </button>
 
         </div>
       );
@@ -201,9 +201,14 @@ export default function Home() {
           {renderButton()}
         </div>
         ):(
-            <button className="block text-white p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 bg-rose-900 dark:border-gray-700 dark:hover:bg-gray-700" onClick={connectWallet}> Connect Your Wallet </button>
-          )}
 
+            <div className="flex items-center justify-center">
+            <br />
+            <button className="block text-white text-xl p-8 max-w-sm rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 bg-rose-900 dark:border-gray-700 dark:hover:bg-gray-700" onClick={connectWallet}> Connect Your Wallet </button>
+
+            </div>
+          )}
+          <br />
           <br />
             <Footer />
 
